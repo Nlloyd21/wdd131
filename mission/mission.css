@@ -1,0 +1,48 @@
+#content {
+    max-width: 40%;
+    border: 1px solid black;
+    margin: 5px auto;
+    padding: 50px;
+
+}
+#content h1{
+    font-family: "EB Garamond", serif;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: normal;
+    
+}
+#content h2 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 1.1em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #0066cc
+
+}
+p, li {
+    font-family: "EB Garamond", serif;
+    line-height: 1.6;
+    text-align: justify;
+    font-size:1.2em;
+}
+#mission-topics p {
+    font-style: italic;
+    
+}
+#mission-topics ol li{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+#logo {
+    text-align: center; 
+}
+
+#logo img {
+    width: 150px; 
+    height: auto;
+}
+
+
