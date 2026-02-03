@@ -51,7 +51,7 @@ header, footer {
     grid-column: 1/3;
 }
 
-/* code we added to shift the photo and movie class */
+/* code we added to shift the photo and movie class. yay*/
 
 @media (min-width: 600px) {
     .main-nav{
