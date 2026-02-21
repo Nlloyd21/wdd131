@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Form</title>
+    <link rel="stylesheet" href="credit-card-form.css">
+</head>
+<body>
+    <form class="form-grid">
+        <div class="card-front">
+            <p id="total">TOTAL: $199</p>
+            <div class="card-logo"></div>
+
+            <label for="cardNumber" class="label-number">CARD NUMBER</label>
+            <input type="text" id="cardNumber" class="input-number" placeholder="1234 5678 9101 1020">
+
+            <label for="cardHolder" class="label-holder">CARD HOLDER</label>
+            <input type="text" id="cardHolder" class="input-holder" placeholder="John Doe">
+
+            <label class="label-expiry">EXPIRATION</label>
+            <div class="expiry-grid">
+                <input type="text" id="month" placeholder="MM">
+                <input type="text" id="year" placeholder="YY">
+            </div>
+        </div>
+
+        <div class="card-back">
+            <div class="black-stripe"></div>
+            <label for="cvc" class="label-cvc">CVC/CVV</label>
+            <input type="text" id="cvc" class="input-cvc" placeholder="xxx">
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</body>
+</html>

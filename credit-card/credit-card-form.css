@@ -1,0 +1,77 @@
+
+.form-grid {
+    display: grid;
+    /* 4 columns: Gutters on sides, 2 center columns for overlap */
+    grid-template-columns: 80px 1fr 1fr 80px; 
+    /* 4 rows: Front card, Overlap, Back card tail, Submit button */
+    grid-template-rows: 60px 160px 100px 70px;
+    
+    max-width: 700px;
+    margin: 4rem auto;
+    font-family: 'Times New Roman', serif;
+}
+
+.card-front {
+    grid-area: 1 / 1 / 3 / 4; /* Row start/Col start/Row end/Col end */
+    z-index: 2;
+    background: #d1cdc7;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 10px 10px 25px rgba(0,0,0,0.2);
+
+    /* Internal Grid (Image: Card Front Grid) */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto auto auto; /* 5 rows for stacking */
+    row-gap: 5px;
+    column-gap: 20px;
+}
+
+#total { grid-area: 1 / 1 / 2 / 2; font-weight: bold; font-size: 1.4rem; margin: 0; }
+.card-logo { grid-area: 1 / 2 / 2 / 3; justify-self: end; }
+
+
+.label-number { grid-area: 2 / 1 / 3 / 2; font-weight: bold; font-size: 0.9rem; align-self: end; }
+.input-number { grid-area: 3 / 1 / 4 / 2; padding: 10px; border: 1px solid #999; border-radius: 4px; }
+
+.label-holder { grid-area: 4 / 1 / 5 / 2; font-weight: bold; font-size: 0.9rem; align-self: end; margin-top: 10px; }
+.input-holder { grid-area: 5 / 1 / 6 / 2; padding: 10px; border: 1px solid #999; border-radius: 4px; }
+
+.label-expiry { grid-area: 4 / 2 / 5 / 3; font-weight: bold; font-size: 0.9rem; align-self: end; margin-top: 10px; }
+.expiry-grid { 
+    grid-area: 5 / 2 / 6 / 3; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 8px; 
+}
+.expiry-grid input { padding: 10px; border: 1px solid #999; border-radius: 4px; width: 100%; box-sizing: border-box; }
+
+.card-back {
+    grid-area: 2 / 2 / 4 / 5;
+    z-index: 1;
+    background: #bcbab5;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+}
+
+.black-stripe { grid-area: 1 / 1 / 2 / 4; background: #000; margin-top: 25px; }
+
+.label-cvc { grid-area: 2 / 3 / 3 / 4; align-self: end; text-align: right; padding-right: 25px; font-weight: bold; font-size: 0.9rem; }
+.input-cvc { grid-area: 3 / 3 / 4 / 4; width: 80px; justify-self: end; margin-right: 25px; padding: 10px; border: 1px solid #999; border-radius: 4px; }
+
+.submit-btn {
+    grid-area: 4 / 4 / 5 / 5;
+    justify-self: end;
+    align-self: start;
+    padding: 12px 35px;
+    background: #e6e6e6;
+    border: 2px solid #333;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #000;
+}
