@@ -1,0 +1,42 @@
+header{
+    padding: 2em;
+    background-color: #BA3E3D;
+}
+.menu {
+    display: flex;
+    justify-content:space-evenly;
+}
+nav a {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.6em;
+    color: white;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #A8D0E6;
+}
+.hidden {
+    display: none;
+}
+.price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2D4D6C; /* Using your Navy Blue */
+    font-size: 1.2rem;
+}
+.comparison-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media  (min-width: 650px){
+
+
+}
+    

@@ -1,0 +1,23 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="45" fill="#2D4D6C" />
+  
+  <circle cx="50" cy="50" r="35" fill="#A8D0E6" />
+  
+  <clipPath id="circleView">
+    <circle cx="50" cy="50" r="35" />
+  </clipPath>
+  
+  <g clip-path="url(#circleView)">
+    <path d="M-10 60 Q 25 40 50 60 T 110 60 V 100 H -10 Z" fill="#1B365D" />
+    <path d="M-10 65 Q 25 50 50 65 T 110 65 V 100 H -10 Z" fill="#2D4D6C" opacity="0.5" />
+  </g>
+  
+  <circle cx="50" cy="10" r="2" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="50" cy="90" r="2" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="10" cy="50" r="2" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="90" cy="50" r="2" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="22" cy="22" r="2" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="78" cy="22" r="2" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="22" cy="78" r="2" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="78" cy="78" r="2" fill="#FFFFFF" opacity="0.8" />
+</svg>
