@@ -71,58 +71,40 @@ function renderStateroom(room, containerId) {
             <ul class="perks">
                 ${room.perks.map(perk => `<li>${perk}</li>`).join('')}
             </ul>
-        </div>
-    `;
+        </div>`;
 
     container.classList.remove('hidden');
 }
 
 
-let roomA = null;
-let roomB = null;
 
-const compareBtn = document.getElementById('compare-btn');
-const criteriaSelect = document.getElementById('highlight-select');
 
-compareBtn.addEventListener('click', () => {
-    const criteria = criteriaSelect.value;
+const compareBtn = document.getElementById('highlight');
+
+compareBtn.addEventListener('change', () => {
+    const criteria = document.getElementById('highlight').value;
     const cardA = document.getElementById('card-a');
     const cardB = document.getElementById('card-b');
 
-    // Remove existing highlights first
-    cardA.classList.remove('winner');
-    cardB.classList.remove('winner');
+    
+    cardA.classList.remove('highlight-winner');
+    cardB.classList.remove('highlight-winner');
 
-    if (!roomA || !roomB || !criteria) {
-        alert("Please select two rooms and a criteria first!");
-        return;
-    }
+    const roomA = staterooms.find(r => r.id === document.getElementById('select-a').value);
+    const roomB = staterooms.find(r => r.id === document.getElementById('select-b').value);
 
+    if (!roomA || !roomB || !criteria) return;
+    
     if (criteria === "price") {
-        // For price, lower is better
-        if (roomA.price < roomB.price) {
-            cardA.classList.add('winner');
-        } else if (roomB.price < roomA.price) {
-            cardB.classList.add('winner');
-        }
+        if (roomA.price < roomB.price) cardA.classList.add('highlight-winner');
+        else if (roomB.price < roomA.price) cardB.classList.add('highlight-winner');
     } 
     else if (criteria === "capacity") {
-        // For capacity, higher is better
-        if (roomA.capacity > roomB.capacity) {
-            cardA.classList.add('winner');
-        } else if (roomB.capacity > roomA.capacity) {
-            cardB.classList.add('winner');
-        }
-    }
+        if (roomA.capacity > roomB.capacity) cardA.classList.add('highlight-winner');
+        else if (roomB.capacity > roomA.capacity) cardB.classList.add('highlight-winner');
+    } 
     else if (criteria === "size") {
-        // Since size is a string "185 sq ft", we need to turn it into a number
-        const sizeA = parseInt(roomA.size);
-        const sizeB = parseInt(roomB.size);
-        
-        if (sizeA > sizeB) {
-            cardA.classList.add('winner');
-        } else {
-            cardB.classList.add('winner');
-        }
+        if (roomA.size > roomB.size) cardA.classList.add('highlight-winner');
+        else if (roomB.size > roomA.size) cardB.classList.add('highlight-winner');
     }
 });

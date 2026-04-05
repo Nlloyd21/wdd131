@@ -1,10 +1,13 @@
-header{
+header {
     padding: 2em;
     background-color: #BA3E3D;
+    margin: 0;
 }
 .menu {
     display: flex;
     justify-content:space-evenly;
+    align-items: center;
+    margin: 0 auto;
 }
 nav a {
     text-decoration: none;
@@ -23,7 +26,7 @@ nav a:hover {
 .price {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #2D4D6C; /* Using your Navy Blue */
+    color: #2D4D6C; 
     font-size: 1.2rem;
 }
 .comparison-container {
@@ -34,7 +37,43 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
+.compare-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; 
+    line-height: 1.6;  
+    color: #333333;    
+}
+.card {
+    flex: 1;
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: white;
+    margin-top: 3rem;
+}
 
+.card img {
+    width: 100%;  
+    height: 250px;     
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.highlight-winner {
+    border: 3px solid #2D4D6C; 
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: all 1.3s ease;
+    background-color: #FFB238;
+}
 @media  (min-width: 650px){
 
 
